@@ -1,0 +1,22 @@
+body {
+	width: 600px;
+	font-family: Arial, "Times New Roman";
+	margin: 20px auto;
+}
+canvas {
+	cursor: pointer;
+	margin: 0 auto;
+}
+h3 {
+	text-align: center;
+	color: blue;
+}
+#discription {
+	float: right;
+	margin-right: 30px;
+    margin-top: 15%;
+    float: right;
+}
+#discription div{
+	padding-top: 15px;
+}
