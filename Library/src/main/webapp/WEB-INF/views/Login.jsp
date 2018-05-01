@@ -5,14 +5,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+		<base href="/" target="_blank">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-		<link rel="stylesheet" href="Template/Backend/assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="Template/Backend/assets/font-awesome/4.5.0/css/font-awesome.min.css" >
-		<!--<link rel="stylesheet" href="Template/Backend/assets/css/fonts.googleapis.com.css" />-->
-		<link rel="stylesheet" href="Template/Backend/font/font-awesome.min.css" />
-		<link rel="stylesheet" href="Template/Backend/assets/css/ace.min.css" />
-		<link rel="stylesheet" href="Template/Backend/assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="/Library/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/Library/font-awesome/4.5.0/css/font-awesome.min.css" >
+		<!--<link rel="stylesheet" href="/css/fonts.googleapis.com.css" />-->
+		<link rel="stylesheet" href="/Library/font/font-awesome.min.css" />
+		<link rel="stylesheet" href="/Library/css/ace.min.css" />
+		<link rel="stylesheet" href="/Library/css/ace-rtl.min.css" />
 		<title>Login Page</title>
 </head>
 <body class="login-layout">
@@ -106,9 +107,9 @@
 			</div><!-- /.main-content -->
 		</div><!-- /.main-container -->
 <!-- basic scripts -->
-		<script src="Template/Backend/assets/js/jquery-2.1.4.min.js"></script>
+		<script src="/Library/js/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='Template/Backend/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='/Library/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- inline scripts related to this page -->
