@@ -10,7 +10,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<link rel="stylesheet" href="/Library/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="/Library/font-awesome/4.5.0/css/font-awesome.min.css" >
-		<!--<link rel="stylesheet" href="/css/fonts.googleapis.com.css" />-->
 		<link rel="stylesheet" href="/Library/font/font-awesome.min.css" />
 		<link rel="stylesheet" href="/Library/css/ace.min.css" />
 		<link rel="stylesheet" href="/Library/css/ace-rtl.min.css" />
@@ -44,7 +43,7 @@
 
 											<div class="space-6"></div>
 
-											<form action="main" method="post">
+											<form action="/Library/main" method="post">
 												<fieldset>
 													<label class="block clearfix">
 													${msg}
