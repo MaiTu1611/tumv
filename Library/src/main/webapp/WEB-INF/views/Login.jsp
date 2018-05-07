@@ -43,7 +43,7 @@
 
 											<div class="space-6"></div>
 
-											<form action="/Library/main" method="post">
+											<form action="/Library/" method="post">
 												<fieldset>
 													<label class="block clearfix">
 													${msg}

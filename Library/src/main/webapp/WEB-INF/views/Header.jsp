@@ -23,7 +23,7 @@
 					<a href="AdminForward" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
-							ADMIN
+							Library	
 						</small>
 					</a>
 				</div>
@@ -32,7 +32,7 @@
 					<ul class="nav ace-nav">
 						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="../Template/Backend/assets/images/avatars/user.png" alt="Admin Photo" />
+								<img class="nav-user-photo" src="/Library/images/avatars/user.png" alt="Admin Photo" />
 								<span class="user-info">
 									<small>Welcome</small>
 									<b>${sessionadmin}</b>

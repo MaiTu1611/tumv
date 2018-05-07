@@ -9,23 +9,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="Template/Backend/assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="Template/Backend/assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="/Library/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/Library/font-awesome/4.5.0/css/font-awesome.min.css" />
 
 		<!-- page specific plugin styles -->
-		<link rel="stylesheet" href="Template/Backend/assets/css/colorbox.min.css" />
+		<link rel="stylesheet" href="/Library/css/colorbox.min.css" />
 
 		<!-- text fonts -->
-		<link rel="stylesheet" href="Template/Backend/assets/css/fonts.googleapis.com.css" />
-		<link rel="stylesheet" href="Template/Backend/font/font-awesome.min.css" />
+		<link rel="stylesheet" href="/Library/css/fonts.googleapis.com.css" />
+		<link rel="stylesheet" href="/Library/font/font-awesome.min.css" />
 		<!-- ace styles -->
-		<link rel="stylesheet" href="Template/Backend/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="/Library/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
 		<!--[if lte IE 9]>
 			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
-		<link rel="stylesheet" href="Template/Backend/assets/css/ace-skins.min.css" />
-		<link rel="stylesheet" href="Template/Backend/assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="/Library/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="/Library/css/ace-rtl.min.css" />
 
 		<!--[if lte IE 9]>
 		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
@@ -34,7 +34,7 @@
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
-		<script src="Template/Backend/assets/js/ace-extra.min.js"></script>
+		<script src="/Library/js/ace-extra.min.js"></script>
 
 <title>Trang Quản Trị</title>
 </head>
@@ -67,8 +67,8 @@
 									<ul class="ace-thumbnails clearfix">
 									<center>
 										<li>
-											<a href="../Template/Backend/assets/images/gallery/logo1.png" data-rel="colorbox">
-												<img width="1000" height="500" style = "margin-top: 8%" alt="150x150" src="Template/Backend/assets/images/gallery/logo1.png" />
+											<a href="..//Library/images/gallery/logo1.png" data-rel="colorbox">
+												<img width="1000" height="500" style = "margin-top: 8%" alt="150x150" src="/Library/images/gallery/logo1.png" />
 											</a>
 										</li>
 										</center>
@@ -89,21 +89,21 @@
 		<!-- basic scripts -->
 
 		<!--[if !IE]> -->
-		<script src="Template/Backend/assets/js/jquery-2.1.4.min.js"></script>
+		<script src="/Library/js/jquery-2.1.4.min.js"></script>
 
 		<!-- <![endif]-->
 
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='Template/Backend/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='/Library/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="Template/Backend/assets/js/bootstrap.min.js"></script>
+		<script src="/Library/js/bootstrap.min.js"></script>
 
 		<!-- page specific plugin scripts -->
-		<script src="Template/Backend/assets/js/jquery.colorbox.min.js"></script>
+		<script src="/Library/js/jquery.colorbox.min.js"></script>
 
 		<!-- ace scripts -->
-		<script src="Template/Backend/assets/js/ace-elements.min.js"></script>
-		<script src="Template/Backend/assets/js/ace.min.js"></script>
+		<script src="/Library/js/ace-elements.min.js"></script>
+		<script src="/Library/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
