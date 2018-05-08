@@ -42,7 +42,7 @@
 					</div>
 				</div><!-- /.sidebar-shortcuts -->
 
-				<ul class="nav nav-list">					
+				<ul class="nav nav-list">
 					<li class="">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-list"></i>
@@ -55,7 +55,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="ListGrammarGuidelineManage">
+								<a href="/Library/Admin">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Grammar
 								</a>
@@ -72,7 +72,7 @@
 								<b class="arrow"></b>
 							</li>
 						</ul>
-					</li>								
+					</li>
 				</ul><!-- /.nav-list -->
 
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">

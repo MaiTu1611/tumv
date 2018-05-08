@@ -5,14 +5,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Data
-public class User {
+public class Book {
 	@Getter
 	@Setter
-    private Integer userId;
+	private int bookId;
 	@Getter
 	@Setter
-    private String userName;
-	@Getter
-	@Setter
-    private String password;
+	private String bookName;
 }
