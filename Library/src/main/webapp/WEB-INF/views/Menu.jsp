@@ -46,7 +46,7 @@
 					<li class="">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-list"></i>
-							<span class="menu-text"> Guideline Manager </span>
+							<span class="menu-text"> Library Manager </span>
 
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
@@ -59,16 +59,62 @@
 									<i class="menu-icon fa fa-caret-right"></i>
 									Grammar
 								</a>
-
 								<b class="arrow"></b>
 							</li>
 
 							<li class="">
 								<a href="ListVocabularyForward">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Vocabulary
+									Lập Thẻ Độc Giả
 								</a>
+								<b class="arrow"></b>
+							</li>
 
+							<li class="">
+								<a href="ListVocabularyForward">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Lập Thẻ Độc Giả
+								</a>
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="ListVocabularyForward">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Tiếp Nhận Sách Mới
+								</a>
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="/Library/Admin">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Cho Mượn Sách
+								</a>
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="ListVocabularyForward">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Nhận Trả Sách
+								</a>
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="ListVocabularyForward">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Lập Phiếu Thu Tiền Phạt
+								</a>
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="ListVocabularyForward">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Lập Báo Cáo
+								</a>
 								<b class="arrow"></b>
 							</li>
 						</ul>

@@ -23,7 +23,7 @@
 					<a href="AdminForward" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
-							Library	
+							Library	Manager
 						</small>
 					</a>
 				</div>

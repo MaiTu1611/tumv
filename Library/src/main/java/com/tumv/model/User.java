@@ -1,18 +1,26 @@
 package com.tumv.model;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
-@Data
 public class User {
-	@Getter
-	@Setter
     private Integer userId;
-	@Getter
-	@Setter
     private String userName;
-	@Getter
-	@Setter
     private String password;
+	public Integer getUserId() {
+		return userId;
+	}
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }
