@@ -39,7 +39,7 @@
 
 <!-- ace settings handler -->
 <script src="/Library/js/ace-extra.min.js"></script>
-
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
 <title>Trang Quản Trị</title>
 </head>
 <body class="no-skin">
@@ -56,7 +56,7 @@
 			<div class="main-content-inner">
 				<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 					<ul class="breadcrumb">
-						<li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Home</a>
+						<li><i class="ace-icon fa fa-home home-icon"></i> <a href="/Library/Home">Home</a>
 						</li>
 					</ul>
 					<!-- /.breadcrumb -->
@@ -67,20 +67,33 @@
 						<div class="col-xs-12">
 							<!-- PAGE CONTENT BEGINS -->
 							<div class="container">
-								<h2>Vertical (basic) Form</h2>
+								<h2>Thẻ Độc Giả</h2>
 								<form>
 									<div class="form-group">
-										<label for="email">Email:</label> <input type="email"
-											class="form-control" id="email" placeholder="Enter email">
+										<label for="name">Họ Và Tên:</label> <input type="text"
+											class="form-control" id="name" placeholder="Họ Và Tên">
 									</div>
 									<div class="form-group">
-										<label for="pwd">Password:</label> <input type="password"
-											class="form-control" id="pwd" placeholder="Enter password">
+										<label for="typeperon">Loại Độc Giả:</label> <input type="text"
+											class="form-control" id="typeperon" placeholder="Loại Độc Giả">
 									</div>
-									<div class="checkbox">
-										<label><input type="checkbox"> Remember me</label>
+									<div class="form-group"> <!-- Date input -->
+								        <label class="control-label" for="dateBorn">Ngày Sinh:</label>
+								        <input class="form-control date" id="dateBorn" name="date" placeholder="MM/DD/YYY" type="text"/>
+								    </div>
+									<div class="form-group">
+										<label for="address">Địa Chỉ:</label> <input type="text"
+											class="form-control" id="address" placeholder="Địa Chỉ">
 									</div>
-									<button type="submit" class="btn btn-default">Submit</button>
+									<div class="form-group">
+										<label for="email">Email:</label> <input type="email"
+											class="form-control" id="email" placeholder="Email">
+									</div>
+									<div class="form-group"> <!-- Date input -->
+								        <label class="control-label" for="dateCreate">Ngày Lập Thẻ:</label>
+								        <input class="form-control date" id="dateCreate" name="date" placeholder="MM/DD/YYY" type="text"/>
+								    </div>
+									<button type="submit" class="btn btn-default">Lập Thẻ</button>
 								</form>
 							</div>
 							<!-- PAGE CONTENT ENDS -->
@@ -149,13 +162,33 @@
 	};
 
 	$('.ace-thumbnails [data-rel="colorbox"]').colorbox(colorbox_params);
+	$( ".datepicker" ).datepicker({
+		   format: 'dd/mm/yyyy'
+		});
 	$("#cboxLoadingGraphic").html("<i class='ace-icon fa fa-spinner orange fa-spin'></i>");//let's add a custom loading icon
 
 
 	$(document).one('ajaxloadstart.page', function(e) {
 		$('#colorbox, #cboxOverlay').remove();
-   });
+   	});
 })
-		</script>
+</script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<script>
+	$(document).ready(function(){
+		var date_input=$('input[name="date"]'); //our date input has the name "date"
+		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		date_input.datepicker({
+			format: 'mm/dd/yyyy',
+			container: container,
+			todayHighlight: true,
+			autoclose: true,
+		})
+	})
+</script>
 </body>
 </html>

@@ -25,10 +25,15 @@ public class LoginController {
 		return "Login";
 	}
 
-	@RequestMapping(value="/", method = RequestMethod.POST)
+	@RequestMapping(value = "/", method = RequestMethod.POST)
 	public String loginControllerPost(ModelMap model) throws Exception {
 		ArrayList<User> listUser = adminService.getAllUser();
 		model.addAttribute("msg", listUser.get(0).getUserName());
+		return "Home";
+	}
+
+	@RequestMapping(value = "/Home", method = RequestMethod.GET)
+	public String redirectToHome() {
 		return "Home";
 	}
 }

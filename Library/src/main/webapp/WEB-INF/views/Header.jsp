@@ -20,7 +20,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="AdminForward" class="navbar-brand">
+					<a href="#" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							Library	Manager

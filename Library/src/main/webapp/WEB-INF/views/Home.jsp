@@ -54,7 +54,7 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">Home</a>
+								<a href="/Library/Home">Home</a>
 							</li>
 						</ul><!-- /.breadcrumb -->
 					</div>

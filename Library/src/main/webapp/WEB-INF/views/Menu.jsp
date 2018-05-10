@@ -55,23 +55,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="/Library/Admin">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Grammar
-								</a>
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="ListVocabularyForward">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Lập Thẻ Độc Giả
-								</a>
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="ListVocabularyForward">
+								<a href="/Library/createTag">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Lập Thẻ Độc Giả
 								</a>
@@ -82,6 +66,14 @@
 								<a href="ListVocabularyForward">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Tiếp Nhận Sách Mới
+								</a>
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="/Library/Admin">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Tra Cứu Sách
 								</a>
 								<b class="arrow"></b>
 							</li>

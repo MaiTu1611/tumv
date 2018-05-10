@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AdminController {
 
-	@RequestMapping(value = "/Admin", method = RequestMethod.GET)
+	@RequestMapping(value = "/createTag", method = RequestMethod.GET)
 	public String AdminManager() {
-		return "admin/AdminManager";
+		return "admin/CreateTag";
 
 	}
 }
