@@ -35,7 +35,7 @@
 								<img class="nav-user-photo" src="/Library/images/avatars/user.png" alt="Admin Photo" />
 								<span class="user-info">
 									<small>Welcome</small>
-									<b>${sessionadmin}</b>
+									<b>${msg}</b>
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
