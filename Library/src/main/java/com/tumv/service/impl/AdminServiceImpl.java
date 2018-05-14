@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tumv.dao.AdminDao;
+import com.tumv.model.Book;
 import com.tumv.model.User;
 import com.tumv.service.AdminService;
 
@@ -18,5 +19,9 @@ public class AdminServiceImpl implements AdminService{
 		ArrayList<User> listUser = adminDao.getAllUser();
 		return listUser;
 	}
+    public ArrayList<Book> getAllBook() throws Exception {
+        ArrayList<Book> listBook = adminDao.getAllBook();
+        return listBook;
+    }
 
 }

@@ -9,6 +9,8 @@
     content="responsive photo gallery using colorbox" />
 <meta name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+<!-- bootstrap & fontawesome -->
 <link rel="stylesheet" href="/Library/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/Library/font-awesome/4.5.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="/Library/css/colorbox.min.css" />
@@ -18,6 +20,8 @@
 <link rel="stylesheet" href="/Library/css/ace-skins.min.css" />
 <link rel="stylesheet" href="/Library/css/ace-rtl.min.css" />
 <link rel="stylesheet" href="/Library/css/style.css" />
+
+<!-- ace settings handler -->
 <script src="/Library/js/ace-extra.min.js"></script>
 <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
 <title>Trang Quản Trị</title>
@@ -47,34 +51,39 @@
                         <div class="col-xs-12">
                             <!-- PAGE CONTENT BEGINS -->
                             <div class="container">
-                                <h2>Thẻ Độc Giả</h2>
+                                <h2>Thông Tin Sách</h2>
                                 <form>
                                     <div class="form-group">
-                                        <label for="name">Họ Và Tên:</label> <input type="text"
-                                            class="form-control" id="name" placeholder="Họ Và Tên">
+                                        <label for="name">Tên Sách:</label> <input type="text"
+                                            class="form-control" id="name" placeholder="Tên Sách">
                                     </div>
                                     <div class="form-group">
-                                        <label for="typeperon">Loại Độc Giả:</label>
+                                        <label for="typeperon">Thể Loại:</label>
                                         <select class="form-control" id="sel1">
-                                            <option>X</option>
-                                            <option>Y</option>
+                                            <option>A</option>
+                                            <option>B</option>
+                                            <option>C</option>
                                          </select>
                                     </div>
-                                    <div class="form-group"> <!-- Date input -->
-                                        <label class="control-label" for="dateBorn">Ngày Sinh:</label>
-                                        <input class="form-control date" id="dateBorn" name="date" placeholder="MM/DD/YYY" type="text"/>
-                                    </div>
                                     <div class="form-group">
-                                        <label for="address">Địa Chỉ:</label> <input type="text"
-                                            class="form-control" id="address" placeholder="Địa Chỉ">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Email:</label> <input type="email"
-                                            class="form-control" id="email" placeholder="Email">
+                                        <label for="name">Tác Giả:</label> <input type="text"
+                                            class="form-control" id="name" placeholder="Tác Giả">
                                     </div>
                                     <div class="form-group"> <!-- Date input -->
-                                        <label class="control-label" for="dateCreate">Ngày Lập Thẻ:</label>
-                                        <input class="form-control date" id="dateCreate" name="date" placeholder="MM/DD/YYY" type="text"/>
+                                        <label class="control-label" for="dateBorn">Năm Xuất Bản:</label>
+                                        <input class="form-control date" id="dateBorn" name="dateYear" placeholder="YYYY" type="text"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address">Nhà Xuất Bản:</label> <input type="text"
+                                            class="form-control" id="address" placeholder="Nhà Xuất Bản">
+                                    </div>
+                                    <div class="form-group"> <!-- Date input -->
+                                        <label class="control-label" for="dateCreate">Ngày Nhập:</label>
+                                        <input class="form-control date" id="dateCreate" name="date" placeholder="MM/DD/YYYY" type="text"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Trị Giá:</label> <input type="text"
+                                            class="form-control" id="money" name="money" placeholder="Trị Giá" >
                                     </div>
                                     <button type="submit" class="btn btn-default">Lập Thẻ</button>
                                 </form>
@@ -159,19 +168,44 @@
 
 <!-- Include Date Range Picker -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<script src="/Library/js/number-divider.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
 <script>
     $(document).ready(function(){
         var date_input=$('input[name="date"]'); //our date input has the name "date"
+        var date_input_year=$('input[name="dateYear"]'); //our date input has the name "date"
+        var money_input=$('input[name="money"]'); //our date input has the name "date"
         var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
         date_input.datepicker({
             format: 'mm/dd/yyyy',
             container: container,
             todayHighlight: true,
             autoclose: true,
-        })
-    })
+        });
+        date_input_year.datepicker({
+            format: "yyyy",
+            viewMode: "years",
+            minViewMode: "years",
+            yearRange: '1950:2018',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+            });
+        money_input.keyup(function(event) {
+
+        	  // skip for arrow keys
+        	  if(event.which >= 37 && event.which <= 40) return;
+
+        	  // format number
+        	  $(this).val(function(index, value) {
+        	    return value
+        	    .replace(/\D/g, "")
+        	    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        	    ;
+        	  });
+        	});
+    });
 </script>
 </body>
 </html>
