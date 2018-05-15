@@ -51,41 +51,39 @@
                         <div class="col-xs-12">
                             <!-- PAGE CONTENT BEGINS -->
                             <div class="container">
-                                <h2>Thông Tin Sách</h2>
+                                <h2>Phiếu Thu Tiền Phạt</h2>
                                 <form>
                                     <div class="form-group">
-                                        <label for="name">Tên Sách:</label> <input type="text"
-                                            class="form-control" id="name" placeholder="Tên Sách">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="typeperon">Thể Loại:</label>
-                                        <select class="form-control" id="sel1">
-                                            <option>A</option>
-                                            <option>B</option>
-                                            <option>C</option>
-                                         </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="name">Tác Giả:</label> <input type="text"
-                                            class="form-control" id="name" placeholder="Tác Giả">
+                                        <label for="name">Họ Tên Độc Giả:</label> <input type="text"
+                                            class="form-control" id="name" placeholder="Họ Tên Độc Giả">
                                     </div>
                                     <div class="form-group"> <!-- Date input -->
-                                        <label class="control-label" for="dateBorn">Năm Xuất Bản:</label>
-                                        <input class="form-control date" id="dateBorn" name="dateYear" placeholder="YYYY" type="text"/>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="address">Nhà Xuất Bản:</label> <input type="text"
-                                            class="form-control" id="address" placeholder="Nhà Xuất Bản">
-                                    </div>
-                                    <div class="form-group"> <!-- Date input -->
-                                        <label class="control-label" for="dateCreate">Ngày Nhập:</label>
+                                        <label class="control-label" for="dateCreate">Ngày Mượn:</label>
                                         <input class="form-control date" id="dateCreate" name="date" placeholder="MM/DD/YYYY" type="text"/>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="email">Trị Giá:</label> <input type="text"
-                                            class="form-control" id="money" name="money" placeholder="Trị Giá" >
-                                    </div>
-                                    <button type="submit" class="btn btn-default">Thêm Sách</button>
+                                    <table class="table table-bordered table-hover">
+	                                    <thead>
+	                                        <tr>
+	                                            <th scope="col">STT</th>
+	                                            <th scope="col">Mã Sách</th>
+	                                            <th scope="col">Tên Sách</th>
+	                                            <th scope="col">Thể Loại</th>
+	                                            <th scope="col">Tác Giả</th>
+	                                        </tr>
+	                                    </thead>
+	                                    <tbody>
+	                                        <c:forEach items="${listBook}" var="item">
+	                                            <tr>
+	                                                <th scope="row">${item.bookId}</th>
+	                                                <td>${item.bookId}</td>
+	                                                <td>${item.bookName}</td>
+	                                                <td>${item.bookType}</td>
+	                                                <td>${item.bookAuther}</td>
+	                                            </tr>
+	                                        </c:forEach>
+	                                    </tbody>
+                                    </table>
+                                    <button type="submit" class="btn btn-default">Lập Thẻ</button>
                                 </form>
                             </div>
                             <!-- PAGE CONTENT ENDS -->

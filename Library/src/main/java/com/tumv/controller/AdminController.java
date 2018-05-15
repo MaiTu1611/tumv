@@ -29,11 +29,43 @@ public class AdminController {
 
     }
 
-    @RequestMapping(value = "/ListBook", method = RequestMethod.GET)
+    @RequestMapping(value = "/listBook", method = RequestMethod.GET)
     public String ListBookMapping(ModelMap model) throws Exception {
         ArrayList<Book> listBook = adminService.getAllBook();
         model.addAttribute("listBook", listBook);
         return "admin/ListBook";
+
+    }
+
+    @RequestMapping(value = "/borrowBook", method = RequestMethod.GET)
+    public String BorrowBookMapping(ModelMap model) throws Exception {
+        ArrayList<Book> listBook = adminService.getAllBook();
+        model.addAttribute("listBook", listBook);
+        return "admin/BorrowBook";
+
+    }
+
+    @RequestMapping(value = "/returnBook", method = RequestMethod.GET)
+    public String ReturnBookMapping(ModelMap model) throws Exception {
+        ArrayList<Book> listBook = adminService.getAllBook();
+        model.addAttribute("listBook", listBook);
+        return "admin/ReturnBook";
+
+    }
+
+    @RequestMapping(value = "/penalizeBook", method = RequestMethod.GET)
+    public String PenalizeBookMapping(ModelMap model) throws Exception {
+        ArrayList<Book> listBook = adminService.getAllBook();
+        model.addAttribute("listBook", listBook);
+        return "admin/PenalizeBook";
+
+    }
+
+    @RequestMapping(value = "/reportBook", method = RequestMethod.GET)
+    public String ReportBookMapping(ModelMap model) throws Exception {
+        ArrayList<Book> listBook = adminService.getAllBook();
+        model.addAttribute("listBook", listBook);
+        return "admin/ReportBook";
 
     }
 }

@@ -71,7 +71,7 @@
                             </li>
 
                             <li class="">
-                                <a href="/Library/ListBook">
+                                <a href="/Library/listBook">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Tra Cứu Sách
                                 </a>
@@ -79,7 +79,7 @@
                             </li>
 
                             <li class="">
-                                <a href="/Library/Admin">
+                                <a href="/Library/borrowBook">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Cho Mượn Sách
                                 </a>
@@ -87,7 +87,7 @@
                             </li>
 
                             <li class="">
-                                <a href="ListVocabularyForward">
+                                <a href="/Library/returnBook">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Nhận Trả Sách
                                 </a>
@@ -95,7 +95,7 @@
                             </li>
 
                             <li class="">
-                                <a href="ListVocabularyForward">
+                                <a href="/Library/penalizeBook">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Lập Phiếu Thu Tiền Phạt
                                 </a>
@@ -103,7 +103,7 @@
                             </li>
 
                             <li class="">
-                                <a href="ListVocabularyForward">
+                                <a href="/Library/reportBook">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Lập Báo Cáo
                                 </a>
