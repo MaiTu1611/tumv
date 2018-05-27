@@ -2,6 +2,7 @@ package com.tumv.controller;
 
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -15,6 +16,8 @@ import com.tumv.service.AdminService;
 @Controller
 public class LoginController {
 
+    private static final Logger logger = Logger.getLogger(LoginController.class);
+
 	@Autowired
 	private AdminService adminService;
 
@@ -22,6 +25,7 @@ public class LoginController {
 	public String loginControllerGet(ModelMap model) throws Exception {
 		ArrayList<User> listUser = adminService.getAllUser();
 		model.addAttribute("user", listUser.get(0).getUserName());
+		logger.debug("getWelcome is executed!");
 		return "Login";
 	}
 
@@ -34,6 +38,7 @@ public class LoginController {
 
 	@RequestMapping(value = "/Home", method = RequestMethod.GET)
 	public String redirectToHome() {
+	    logger.debug("getWelcome is Home!");
 		return "Home";
 	}
 }

@@ -81,7 +81,7 @@
                             <li class="">
                                 <a href="/Library/borrowBook">
                                     <i class="menu-icon fa fa-caret-right"></i>
-                                    Cho Mượn Sách
+                                    Phiếu Mượn Sách
                                 </a>
                                 <b class="arrow"></b>
                             </li>
