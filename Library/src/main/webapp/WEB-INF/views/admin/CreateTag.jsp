@@ -48,7 +48,7 @@
                             <!-- PAGE CONTENT BEGINS -->
                             <div class="container">
                                 <h2>Thẻ Độc Giả</h2>
-                                <form>
+                                <form action="/Library/CreateTag" method="post">
                                     <div class="form-group">
                                         <label for="name">Họ Và Tên:</label> <input type="text"
                                             class="form-control" id="name" placeholder="Họ Và Tên">

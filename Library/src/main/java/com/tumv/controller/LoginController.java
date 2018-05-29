@@ -18,27 +18,27 @@ public class LoginController {
 
     private static final Logger logger = Logger.getLogger(LoginController.class);
 
-	@Autowired
-	private AdminService adminService;
+    @Autowired
+    private AdminService adminService;
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String loginControllerGet(ModelMap model) throws Exception {
-		ArrayList<User> listUser = adminService.getAllUser();
-		model.addAttribute("user", listUser.get(0).getUserName());
-		logger.debug("getWelcome is executed!");
-		return "Login";
-	}
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String loginControllerGet(ModelMap model) throws Exception {
+        ArrayList<User> listUser = adminService.getAllUser();
+        model.addAttribute("user", listUser.get(0).getUserName());
+        logger.debug("getWelcome is executed!");
+        return "Login";
+    }
 
-	@RequestMapping(value = "/", method = RequestMethod.POST)
-	public String loginControllerPost(ModelMap model) throws Exception {
-		ArrayList<User> listUser = adminService.getAllUser();
-		model.addAttribute("msg", listUser.get(0).getUserName());
-		return "Home";
-	}
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public String loginControllerPost(ModelMap model) throws Exception {
+        ArrayList<User> listUser = adminService.getAllUser();
+        model.addAttribute("msg", listUser.get(0).getUserName());
+        return "Home";
+    }
 
-	@RequestMapping(value = "/Home", method = RequestMethod.GET)
-	public String redirectToHome() {
-	    logger.debug("getWelcome is Home!");
-		return "Home";
-	}
+    @RequestMapping(value = "/Home", method = RequestMethod.GET)
+    public String redirectToHome() {
+        logger.debug("getWelcome is Home!");
+        return "Home";
+    }
 }
