@@ -55,7 +55,7 @@
 
                         <ul class="submenu">
                             <li class="">
-                                <a href="/Library/createTag">
+                                <a href="/Library/admin/createTag">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Lập Thẻ Độc Giả
                                 </a>
@@ -63,7 +63,7 @@
                             </li>
 
                             <li class="">
-                                <a href="/Library/bookInfo">
+                                <a href="/Library/admin/bookInfo">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Tiếp Nhận Sách Mới
                                 </a>
@@ -71,7 +71,7 @@
                             </li>
 
                             <li class="">
-                                <a href="/Library/listBook">
+                                <a href="/Library/admin/listBook">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Tra Cứu Sách
                                 </a>
@@ -79,7 +79,7 @@
                             </li>
 
                             <li class="">
-                                <a href="/Library/borrowBook">
+                                <a href="/Library/admin/borrowBook">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Phiếu Mượn Sách
                                 </a>
@@ -87,7 +87,7 @@
                             </li>
 
                             <li class="">
-                                <a href="/Library/returnBook">
+                                <a href="/Library/admin/returnBook">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Nhận Trả Sách
                                 </a>
@@ -95,7 +95,7 @@
                             </li>
 
                             <li class="">
-                                <a href="/Library/penalizeBook">
+                                <a href="/Library/admin/penalizeBook">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Lập Phiếu Thu Tiền Phạt
                                 </a>
@@ -103,7 +103,7 @@
                             </li>
 
                             <li class="">
-                                <a href="/Library/reportBook">
+                                <a href="/Library/admin/reportBook">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Lập Báo Cáo
                                 </a>

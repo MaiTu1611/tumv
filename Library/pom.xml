@@ -99,6 +99,29 @@
         <artifactId>log4j</artifactId>
         <version>${log4j.version}</version>
     </dependency>
+    <!-- http://mvnrepository.com/artifact/org.springframework/spring-jdbc%20-->
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-jdbc</artifactId>
+          <version>4.2.5.RELEASE</version>
+      </dependency>
+
+      <!-- Spring Security Artifacts - START -->
+      <!-- http://mvnrepository.com/artifact/org.springframework.security/spring-security-web%20-->
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-web</artifactId>
+          <version>4.0.4.RELEASE</version>
+      </dependency>
+
+      <!-- http://mvnrepository.com/artifact/org.springframework.security/spring-security-config%20-->
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-config</artifactId>
+          <version>4.0.4.RELEASE</version>
+      </dependency>
+      <!-- Spring Security Artifacts - END -->
+
   </dependencies>
   <build>
     <finalName>Library</finalName>

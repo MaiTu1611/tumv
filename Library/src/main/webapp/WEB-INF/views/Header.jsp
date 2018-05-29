@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,51 +8,52 @@
 </head>
 <body>
 	<div id="navbar" class="navbar navbar-default          ace-save-state">
-			<div class="navbar-container ace-save-state" id="navbar-container">
-				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
-					<span class="sr-only">Toggle sidebar</span>
+		<div class="navbar-container ace-save-state" id="navbar-container">
+			<button type="button" class="navbar-toggle menu-toggler pull-left"
+				id="menu-toggler" data-target="#sidebar">
+				<span class="sr-only">Toggle sidebar</span> <span class="icon-bar"></span>
 
-					<span class="icon-bar"></span>
+				<span class="icon-bar"></span> <span class="icon-bar"></span>
+			</button>
 
-					<span class="icon-bar"></span>
+			<div class="navbar-header pull-left">
+				<a href="#" class="navbar-brand"> <small> <i
+						class="fa fa-leaf"></i> Library Manager
+				</small>
+				</a>
+			</div>
 
-					<span class="icon-bar"></span>
-				</button>
-
-				<div class="navbar-header pull-left">
-					<a href="#" class="navbar-brand">
-						<small>
-							<i class="fa fa-leaf"></i>
-							Library	Manager
-						</small>
+			<div class="navbar-buttons navbar-header pull-right"
+				role="navigation">
+				<ul class="nav ace-nav">
+					<li class="light-blue dropdown-modal"><a
+						data-toggle="dropdown" href="#" class="dropdown-toggle"> <img
+							class="nav-user-photo" src="/Library/images/avatars/user.png"
+							alt="Admin Photo" /> <span class="user-info"> <small>Welcome</small>
+								<b>${msg}</b>
+						</span> <i class="ace-icon fa fa-caret-down"></i>
 					</a>
-				</div>
 
-				<div class="navbar-buttons navbar-header pull-right" role="navigation">
-					<ul class="nav ace-nav">
-						<li class="light-blue dropdown-modal">
-							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="/Library/images/avatars/user.png" alt="Admin Photo" />
-								<span class="user-info">
-									<small>Welcome</small>
-									<b>${msg}</b>
-								</span>
-
-								<i class="ace-icon fa fa-caret-down"></i>
-							</a>
-
-							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-								<li>
-									<a href="LogoutController">
-										<i class="ace-icon fa fa-power-off"></i>
-										Logout
-									</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div><!-- /.navbar-container -->
+						<ul
+							class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+							<li><a href="javascript:formSubmit()"> <i
+									class="ace-icon fa fa-power-off"></i> Logout
+							</a></li>
+						</ul></li>
+				</ul>
+			</div>
+			<c:url value="/j_spring_security_logout" var="logoutUrl" />
+			<form action="${logoutUrl}" method="post" id="logoutForm">
+				<input type="hidden" name="${_csrf.parameterName}"
+					value="${_csrf.token}" />
+			</form>
 		</div>
+		<!-- /.navbar-container -->
+	</div>
+	<script>
+		function formSubmit() {
+			document.getElementById("logoutForm").submit();
+		}
+	</script>
 </body>
 </html>

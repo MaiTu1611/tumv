@@ -1,24 +1,36 @@
 package com.tumv.controller;
 
+import java.security.Principal;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.tumv.model.Book;
+import com.tumv.model.Reader;
 import com.tumv.service.AdminService;
 
 @Controller
+@RequestMapping(value = "/admin")
 public class AdminController {
 
     @Autowired
     private AdminService adminService;
 
     @RequestMapping(value = "/createTag", method = RequestMethod.GET)
-    public String createTagMapping() {
+    public String createTagMappingGet() {
+        return "admin/CreateTag";
+
+    }
+
+    @RequestMapping(value = "/createTag", method = RequestMethod.POST)
+    public String createTagMappingPost(@RequestBody Reader reader) {
+        System.out.println(reader);
         return "admin/CreateTag";
 
     }
@@ -67,5 +79,18 @@ public class AdminController {
         model.addAttribute("listBook", listBook);
         return "admin/ReportBook";
 
+    }
+
+    @RequestMapping(value = "/403", method = RequestMethod.GET)
+    public String accessDenied(Model model, Principal principal) {
+
+        if (principal != null) {
+            model.addAttribute("message", "Hi " + principal.getName()
+                    + "<br> You do not have permission to access this page!");
+        } else {
+            model.addAttribute("msg",
+                    "You do not have permission to access this page!");
+        }
+        return "403Page";
     }
 }
