@@ -78,7 +78,9 @@
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->
 				</div>
-			</div><!-- /.main-content -->
+			</div>
+			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+<!-- /.main-content -->
 <!-- Add Footer -->
 			<jsp:include page="Footer.jsp"></jsp:include>
 

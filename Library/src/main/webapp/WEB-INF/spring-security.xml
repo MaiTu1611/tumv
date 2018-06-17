@@ -9,6 +9,8 @@
 
     <http auto-config="true">
         <intercept-url pattern="/admin/**" access="hasRole('ROLE_USER')" />
+        <intercept-url pattern="/home2" access="hasRole('ROLE_USER')" />
+        <intercept-url pattern="/service/**" access="hasRole('ROLE_USER')" />
         <form-login
             login-processing-url="/j_spring_security_check"
             login-page="/Login"
@@ -16,7 +18,7 @@
             authentication-failure-url="/Login"
             username-parameter="username"
             password-parameter="password" />
-        <logout logout-success-url="/Login?logout"/>
+        <logout logout-success-url="/Login?logout" logout-url="/j_spring_security_logout"/>
         <!-- enable csrf protection -->
         <csrf/>
     </http>

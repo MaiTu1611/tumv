@@ -3,46 +3,97 @@ package com.tumv.model;
 import java.util.Date;
 
 public class Reader {
-    private int idReader;
-    private String nameReader;
+    private String name;
     private String typeReader;
-    private Date dateBornReader;
-    public int getIdReader() {
-        return idReader;
+    private Date dateBorn;
+    private String email;
+    private String address;
+    private Date dateCreate;
+    private String _csrf;
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
     }
-    public void setIdReader(int idReader) {
-        this.idReader = idReader;
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getNameReader() {
-        return nameReader;
-    }
-    public void setNameReader(String nameReader) {
-        this.nameReader = nameReader;
-    }
+    /**
+     * @return the typeReader
+     */
     public String getTypeReader() {
         return typeReader;
     }
+    /**
+     * @param typeReader the typeReader to set
+     */
     public void setTypeReader(String typeReader) {
         this.typeReader = typeReader;
     }
-    public Date getDateBornReader() {
-        return dateBornReader;
+    /**
+     * @return the dateBorn
+     */
+    public Date getDateBorn() {
+        return dateBorn;
     }
-    public void setDateBornReader(Date dateBornReader) {
-        this.dateBornReader = dateBornReader;
+    /**
+     * @param dateBorn the dateBorn to set
+     */
+    public void setDateBorn(Date dateBorn) {
+        this.dateBorn = dateBorn;
     }
-    public String getEmailReader() {
-        return emailReader;
+    /**
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
     }
-    public void setEmailReader(String emailReader) {
-        this.emailReader = emailReader;
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
     }
-    public Date getDateCreateTag() {
-        return dateCreateTag;
+    /**
+     * @return the dateCreate
+     */
+    public Date getDateCreate() {
+        return dateCreate;
     }
-    public void setDateCreateTag(Date dateCreateTag) {
-        this.dateCreateTag = dateCreateTag;
+    /**
+     * @param dateCreate the dateCreate to set
+     */
+    public void setDateCreate(Date dateCreate) {
+        this.dateCreate = dateCreate;
     }
-    private String emailReader;
-    private Date dateCreateTag;
+    /**
+     * @return the address
+     */
+    public String getAddress() {
+        return address;
+    }
+    /**
+     * @param address the address to set
+     */
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    /**
+     * @return the _csrf
+     */
+    public String get_csrf() {
+        return _csrf;
+    }
+    /**
+     * @param _csrf the _csrf to set
+     */
+    public void set_csrf(String _csrf) {
+        this._csrf = _csrf;
+    }
+
+
 }

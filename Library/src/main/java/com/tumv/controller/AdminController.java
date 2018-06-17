@@ -10,6 +10,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tumv.model.Book;
 import com.tumv.model.Reader;
@@ -23,14 +24,8 @@ public class AdminController {
     private AdminService adminService;
 
     @RequestMapping(value = "/createTag", method = RequestMethod.GET)
-    public String createTagMappingGet() {
-        return "admin/CreateTag";
-
-    }
-
-    @RequestMapping(value = "/createTag", method = RequestMethod.POST)
-    public String createTagMappingPost(@RequestBody Reader reader) {
-        System.out.println(reader);
+    public String createTagMappingGet(Model model) {
+        model.addAttribute("createTag", new Reader());
         return "admin/CreateTag";
 
     }

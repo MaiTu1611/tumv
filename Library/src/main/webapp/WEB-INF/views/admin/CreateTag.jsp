@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="true"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -48,36 +50,37 @@
                             <!-- PAGE CONTENT BEGINS -->
                             <div class="container">
                                 <h2>Thẻ Độc Giả</h2>
-                                <form action="/Library/createTag" method="POST">
+                                <form:form action="/Library/service/createTag" method="POST" modelAttribute="createTag">
+                                    <form:hidden path="${_csrf.parameterName}" value="${_csrf.token}"/>
                                     <div class="form-group">
-                                        <label for="name">Họ Và Tên:</label> <input type="text"
-                                            class="form-control" id="name" placeholder="Họ Và Tên">
+                                        <label for="name">Họ Và Tên:</label>
+                                        <form:input path="name" class="form-control" id="name" placeholder="Họ Và Tên"/>
                                     </div>
                                     <div class="form-group">
                                         <label for="typeperon">Loại Độc Giả:</label>
-                                        <select class="form-control" id="sel1">
-                                            <option>X</option>
-                                            <option>Y</option>
-                                         </select>
+                                        <form:select class="form-control" id="sel1" path="typeReader">
+                                            <form:option value="X"/>
+                                            <form:option value="Y"/>
+                                        </form:select>
                                     </div>
                                     <div class="form-group"> <!-- Date input -->
                                         <label class="control-label" for="dateBorn">Ngày Sinh:</label>
-                                        <input class="form-control date" id="dateBorn" name="date" placeholder="MM/DD/YYY" type="text"/>
+                                        <form:input class="form-control date" id="dateBorn" path="dateBorn" placeholder="MM/DD/YYY" type="text"/>
                                     </div>
                                     <div class="form-group">
-                                        <label for="address">Địa Chỉ:</label> <input type="text"
-                                            class="form-control" id="address" placeholder="Địa Chỉ">
+                                        <label for="address">Địa Chỉ:</label> <form:input
+                                            class="form-control" id="address" path="address" placeholder="Địa Chỉ"/>
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">Email:</label> <input type="email"
-                                            class="form-control" id="email" placeholder="Email">
+                                        <label for="email">Email:</label> <form:input type="email"
+                                            class="form-control" id="email" path="email" placeholder="Email"/>
                                     </div>
                                     <div class="form-group"> <!-- Date input -->
                                         <label class="control-label" for="dateCreate">Ngày Lập Thẻ:</label>
-                                        <input class="form-control date" id="dateCreate" name="date" placeholder="MM/DD/YYY" type="text"/>
+                                        <form:input class="form-control date" id="dateCreate" path="dateCreate" placeholder="MM/DD/YYY" type="text"/>
                                     </div>
                                     <button type="submit" class="btn btn-default">Lập Thẻ</button>
-                                </form>
+                                </form:form>
                             </div>
                             <!-- PAGE CONTENT ENDS -->
                         </div>
@@ -163,9 +166,16 @@
 
 <script>
     $(document).ready(function(){
-        var date_input=$('input[name="date"]'); //our date input has the name "date"
+        var date_dateBorn=$('input[name="dateBorn"]'); //our date input has the name "date"
+        var date_dateCreate=$('input[name="dateCreate"]'); //our date input has the name "date"
         var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-        date_input.datepicker({
+        date_dateBorn.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        });
+        date_dateCreate.datepicker({
             format: 'mm/dd/yyyy',
             container: container,
             todayHighlight: true,

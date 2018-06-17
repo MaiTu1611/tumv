@@ -38,16 +38,21 @@ public class LoginController {
         return "Login";
     }
 
-    @RequestMapping(value = "/Login", method = RequestMethod.POST)
-    public String loginControllerPost(ModelMap model) throws Exception {
-        ArrayList<User> listUser = adminService.getAllUser();
-        model.addAttribute("msg", listUser.get(0).getUserName());
-        return "Home";
-    }
-
     @RequestMapping(value = "/Home", method = RequestMethod.GET)
     public String redirectToHome() {
         logger.debug("getWelcome is Home!");
         return "Home";
+    }
+
+    @RequestMapping(value = "/home2", method = RequestMethod.GET)
+    public ModelAndView homePage() {
+
+        ModelAndView model = new ModelAndView();
+        model.addObject("title", "Spring Security Custom Login Form");
+        model.addObject("message", "This is protected page!");
+        model.setViewName("home2");
+
+        return model;
+
     }
 }
