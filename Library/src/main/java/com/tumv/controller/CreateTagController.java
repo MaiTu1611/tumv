@@ -1,5 +1,10 @@
 package com.tumv.controller;
 
+import java.util.List;
+
+import javafx.application.Application;
+import javafx.stage.Stage;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,4 +31,11 @@ public class CreateTagController {
         return "admin/CreateTag";
 
     }
+
+    public <T> void showAllElement(List<T> elements) {
+        for (T element : elements) {
+            System.out.println(element);
+        }
+    }
+
 }
